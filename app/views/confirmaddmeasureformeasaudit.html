@@ -1,0 +1,25 @@
+<div style="background-color: white;">
+	<div class="modal-header">
+		<h3>Confirmation</h3>
+		<table class="table table-hover data-table">
+			<tr>
+				<td>{{ columnName[0] }}</td>
+				<td>{{ measureRowToAdd.id.measurementYr }}</td>
+			</tr>
+			<tr>
+				<td>{{ columnName[1] }}</td>
+				<td>{{ measureRowToAdd.id.measureName }}</td>
+			</tr>
+			<tr>
+				<td>{{ columnName[2] }}</td>
+				<td>{{ measureRowToAdd.id.metricCode }}</td>
+			</tr>
+			<tr ng-repeat="column in columnPojo">
+				<td>{{ columnName[$index + 3] }}</td>
+				<td>{{ measureRowToAdd[column] }}</td>
+			</tr>
+		</table>
+		<button ng-click="closeDialog()" class="btn">Close</button>
+		<button ng-click="saveOnAddMeasure()" class="btn btn-primary">Confirm</button>
+	</div>
+</div>

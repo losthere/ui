@@ -1,0 +1,32 @@
+<div style="height:400px; overflow:auto;background-color: white;">
+	<div class="modal-body">
+		<h3>Edit Measure</h3>
+		<table class="table table-hover data-table">
+			<tr ng-repeat="column in columnPojo track by $index">
+				<td ng-if = "(column != 'measureId' && tableName =='MEASURE') || (column != 'dashMeasureSummaryDefId' && tableName =='DASH MEASURE SUMMARY DEF')|| (column != 'denominatorEadMetricDefId' && tableName =='DENOMINATOR EAD METRIC DEF') || (column != 'measureDetailDefId' && tableName =='MEASURE DETAIL DEF ACC') || (column != 'measureSummaryDefId' && tableName =='MEASURE SUMMARY DEF') ||  (column != 'numeratorId' && tableName =='NUMERATOR')" ng-hide="column=='createUser' || column=='creatTmstmp' || column=='updtUser'  || column=='updtTmstmp'" >
+					{{ columnName[$index] }}
+					</td>
+					
+				<td ng-if="column == 'hasHybrid'|| column == 'isPld' || column == 'isActive' || column == 'isCommercial' || column == 'isActive' || column == 'isMedicaid' || column == 'isMedicare' || column == 'isMarketPlace' || column == 'isSnp' || column == 'isStars' || column == 'isNonHedis'" >
+				      
+				      <input type= "radio"  ng-model="measureRowToEdit[column]" ng-value="1" >Y&emsp;
+				      <input type= "radio"  ng-model="measureRowToEdit[column]" ng-value="0">N
+				</td>
+				
+				<td ng-if="column == 'productLine'">
+					<select style="cursor:pointer;width:200px;"  ng-model="measureRowToEdit[column]" required>
+							<option style="cursor:pointer;width:200px;" ng-repeat="pLine in productLine">{{ pLine }}</option>
+					</select>
+				</td>
+				
+				<td ng-hide="column == 'productLine' || column=='createUser'||column=='creatTmstmp' || column=='updtUser'  || column=='updtTmstmp' ||(column == 'measureId' && tableName =='MEASURE') ||  (column == 'dashMeasureSummaryDefId' && tableName =='DASH MEASURE SUMMARY DEF')|| (column == 'denominatorEadMetricDefId' && tableName =='DENOMINATOR EAD METRIC DEF')  || (column == 'measureDetailDefId' && tableName =='MEASURE DETAIL DEF ACC') || (column == 'measureSummaryDefId' && tableName =='MEASURE SUMMARY DEF') || (column == 'numeratorId' && tableName =='NUMERATOR') ||column == 'hasHybrid'|| column == 'isPld' || column == 'isActive' || column == 'isCommercial' || column == 'isActive' || column == 'isMedicaid' || column == 'isMedicare' || column == 'isMarketPlace' || column == 'isSnp' || column == 'isStars' || column == 'isNonHedis'" >
+					<input ng-readonly="column == 'measureYear' || column == 'measureId'"  ng-model="measureRowToEdit[column]" style="height: 30px; width: 200px;" /></td>
+				</td>
+			</tr>
+				
+		</table>
+	
+		<button ng-click="closeDialog()" class="btn">Close</button>
+		<button ng-click="saveOnEditMeasure()" class="btn btn-primary">Save</button>
+	</div>
+</div>

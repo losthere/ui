@@ -1,0 +1,1187 @@
+/**
+ * Copyright (c) Optum 2015 - All Rights Reserved.
+ */
+
+@font-face {
+    font-family: 'Optum-Micro-interaction-Icons';
+    src: url('fonts/Optum-Micro-interaction-Icons.eot?pjuq3w');
+    src: url('fonts/Optum-Micro-interaction-Icons.eot?pjuq3w#iefix') format('embedded-opentype'), url('fonts/Optum-Micro-interaction-Icons.woff2?pjuq3w') format('woff2'), url('fonts/Optum-Micro-interaction-Icons.ttf?pjuq3w') format('truetype'), url('fonts/Optum-Micro-interaction-Icons.woff?pjuq3w') format('woff'), url('fonts/Optum-Micro-interaction-Icons.svg?pjuq3w#Optum-Micro-interaction-Icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="cux-icon-"],
+[class*=" cux-icon-"] {
+    font-family: 'Optum-Micro-interaction-Icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: #c25608;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Icon-specific color overrides */
+/* grey color */
+.cux-icon-caret_up_centered,
+.cux-icon-caret_down_centered,
+.cux-icon-caret_left,
+.cux-icon-caret_right,
+.cux-icon-sort,
+.cux-icon-sort_up,
+.cux-icon-sort_down,
+.cux-icon-rewind,
+.cux-icon-forward,
+.cux-icon-move,
+.cux-icon-close,
+.cux-icon-pause,
+.cux-icon-play,
+.cux-icon-stop,
+.cux-icon-splitter_horizontal,
+.cux-icon-splitter_vertical {
+    color: #434448;
+}
+
+/* red color */
+.cux-icon-alert_filled,
+.cux-icon-warning_filled,
+.cux-icon-asterisk {
+    color: #e32315;
+}
+
+/* green color */
+.cux-icon-checkmark_filled {
+    color: #627d32;
+}
+
+/* Icon font codes */
+.cux-icon-trash_delete:before {
+    content: "\e90e";
+}
+
+.cux-icon-warning_hollow:before {
+    content: "\e92a";
+}
+
+.cux-icon-warning_filled:before {
+    content: "\e99b";
+}
+
+.cux-icon-favorite_hollow:before {
+    content: "\e925";
+}
+
+.cux-icon-folder_open:before {
+    content: "\e909";
+}
+
+.cux-icon-view_hide:before {
+    content: "\e96d";
+}
+
+.cux-icon-screen_maximize:before {
+    content: "\e963";
+}
+
+.cux-icon-list:before {
+    content: "\e95b";
+}
+
+.cux-icon-email:before {
+    content: "\e914";
+}
+
+.cux-icon-email_reply:before {
+    content: "\e915";
+}
+
+.cux-icon-email_reply_all:before {
+    content: "\e916";
+}
+
+.cux-icon-email_forward:before {
+    content: "\e917";
+}
+
+.cux-icon-star_rating_hollow:before {
+    content: "\e923";
+}
+
+.cux-icon-star_rating_filled:before {
+    content: "\e924";
+}
+
+.cux-icon-info_hollow:before {
+    content: "\e927";
+}
+
+.cux-icon-help_hollow:before {
+    content: "\e928";
+}
+
+.cux-icon-alert_hollow:before {
+    content: "\e929";
+}
+
+.cux-icon-alert_filled:before {
+    content: "\e98c";
+}
+
+.cux-icon-checkmark_hollow:before {
+    content: "\e92e";
+}
+
+.cux-icon-sort_up:before {
+    content: "\e93c";
+}
+
+.cux-icon-sort_down:before {
+    content: "\e93d";
+}
+
+.cux-icon-guidelines:before {
+    content: "\e991";
+}
+
+.cux-icon-contract:before {
+    content: "\e966";
+}
+
+.cux-icon-add:before {
+    content: "\e96a";
+}
+
+.cux-icon-clinical-overview:before {
+    content: "\e985";
+}
+
+.cux-icon-allergies:before {
+    content: "\e976";
+}
+
+.cux-icon-lab-results:before {
+    content: "\e97a";
+}
+
+.cux-icon-medical_symbol:before {
+    content: "\e981";
+}
+
+.cux-icon-alert_filled:before {
+    content: "\e98c";
+}
+
+.cux-icon-checkmark_filled:before {
+    content: "\e994";
+}
+
+.cux-icon-help_filled:before {
+    content: "\e999";
+}
+
+.cux-icon-info_filled:before {
+    content: "\e99a";
+}
+
+.cux-icon-warning_filled:before {
+    content: "\e99b";
+}
+
+.cux-icon-caret_up_centered:before {
+    content: "\e992";
+}
+
+.cux-icon-caret_down_centered:before {
+    content: "\e993";
+}
+
+.cux-icon-caret_left:before {
+    content: "\e93e";
+}
+
+.cux-icon-caret_right:before {
+    content: "\e93f";
+}
+
+.cux-icon-advocacy:before {
+    content: "\e9a1";
+}
+
+.cux-icon-alternative_therapies:before {
+    content: "\e9a2";
+}
+
+.cux-icon-community:before {
+    content: "\e9a3";
+}
+
+.cux-icon-data:before {
+    content: "\e9a4";
+}
+
+.cux-icon-diabetes:before {
+    content: "\e9a5";
+}
+
+.cux-icon-digestive-health:before {
+    content: "\e9a6";
+}
+
+.cux-icon-handshake:before {
+    content: "\e9a7";
+}
+
+.cux-icon-fitness:before {
+    content: "\e9a8";
+}
+
+.cux-icon-hearing:before {
+    content: "\e9a9";
+}
+
+.cux-icon-hospice:before {
+    content: "\e9aa";
+}
+
+.cux-icon-long-term-care:before {
+    content: "\e9ab";
+}
+
+.cux-icon-baby-bottle:before {
+    content: "\e9ac";
+}
+
+.cux-icon-mens-health:before {
+    content: "\e9ad";
+}
+
+.cux-icon-orthopedics:before {
+    content: "\e9ae";
+}
+
+.cux-icon-sleep:before {
+    content: "\e9af";
+}
+
+.cux-icon-smoking-cessation:before {
+    content: "\e9b0";
+}
+
+.cux-icon-mental-health:before {
+    content: "\e9b1";
+}
+
+.cux-icon-womens-health:before {
+    content: "\e9b2";
+}
+
+.cux-icon-groceries:before {
+    content: "\e9b3";
+}
+
+.cux-icon-self-care:before {
+    content: "\e9b4";
+}
+
+.cux-icon-shopping_cart:before {
+    content: "\e9b5";
+}
+
+.cux-icon-briefcase:before {
+    content: "\e9b6";
+}
+
+.cux-icon-dock:before {
+    content: "\e9b7";
+}
+
+.cux-icon-undock:before {
+    content: "\e9b8";
+}
+
+.cux-icon-search-field-clear:before {
+    content: "\e9b9";
+}
+
+.cux-icon-coaching:before {
+    content: "\e9ba";
+}
+
+.cux-icon-referral:before {
+    content: "\e9bb";
+}
+
+.cux-icon-healthcare:before {
+    content: "\e9bc";
+}
+
+.cux-icon-emeritus:before {
+    content: "\e9bd";
+}
+
+.cux-icon-pause:before {
+    content: "\e9be";
+}
+
+.cux-icon-play:before {
+    content: "\e9bf";
+}
+
+.cux-icon-stop:before {
+    content: "\e9c0";
+}
+
+.cux-icon-sticky-note:before {
+    content: "\e9c1";
+}
+
+.cux-icon-children:before {
+    content: "\e9c2";
+}
+
+.cux-icon-coder:before {
+    content: "\e9c3";
+}
+
+.cux-icon-compass:before {
+    content: "\e9c4";
+}
+
+.cux-icon-doctor_patient:before {
+    content: "\e9c5";
+}
+
+.cux-icon-emergency-room:before {
+    content: "\e9c6";
+}
+
+.cux-icon-expertise:before {
+    content: "\e9c7";
+}
+
+.cux-icon-financial-security:before {
+    content: "\e9c8";
+}
+
+.cux-icon-health-profile:before {
+    content: "\e9c9";
+}
+
+.cux-icon-notification:before {
+    content: "\e9ca";
+}
+
+.cux-icon-customer-service:before {
+    content: "\e9cb";
+}
+
+.cux-icon-nurse-line:before {
+    content: "\e9cc";
+}
+
+.cux-icon-family:before {
+    content: "\e9cd";
+}
+
+.cux-icon-provider:before {
+    content: "\e9ce";
+}
+
+.cux-icon-exercise:before {
+    content: "\e9cf";
+}
+
+.cux-icon-workers-comp:before {
+    content: "\e9d0";
+}
+
+.cux-icon-communicate:before {
+    content: "\e9d1";
+}
+
+.cux-icon-building:before {
+    content: "\e9d2";
+}
+
+.cux-icon-hospital:before {
+    content: "\e9d3";
+}
+
+.cux-icon-government:before {
+    content: "\e9d4";
+}
+
+.cux-icon-health:before {
+    content: "\e9d5";
+}
+
+.cux-icon-nutrition:before {
+    content: "\e9d6";
+}
+
+.cux-icon-computer:before {
+    content: "\e9d7";
+}
+
+.cux-icon-computer_stats:before {
+    content: "\e9d8";
+}
+
+.cux-icon-results:before {
+    content: "\e9d9";
+}
+
+.cux-icon-claim:before {
+    content: "\e9da";
+}
+
+.cux-icon-eye-exam:before {
+    content: "\e9db";
+}
+
+.cux-icon-finances:before {
+    content: "\e9dc";
+}
+
+.cux-icon-overdue:before {
+    content: "\e9dd";
+}
+
+.cux-icon-mobile:before {
+    content: "\e9de";
+}
+
+.cux-icon-go-green:before {
+    content: "\e9df";
+}
+
+.cux-icon-sms_text:before {
+    content: "\e9e0";
+}
+
+.cux-icon-reimburse:before {
+    content: "\e9e1";
+}
+
+.cux-icon-thermometer:before {
+    content: "\e9e2";
+}
+
+.cux-icon-tools:before {
+    content: "\e9e3";
+}
+
+.cux-icon-carb-counting:before {
+    content: "\e9e4";
+}
+
+.cux-icon-scale:before {
+    content: "\e9e5";
+}
+
+.cux-icon-consent:before {
+    content: "\e9e6";
+}
+
+.cux-icon-consent-no:before {
+    content: "\e9e7";
+}
+
+.cux-icon-process:before {
+    content: "\e92d";
+}
+
+.cux-icon-fitness-device:before {
+    content: "\e95a";
+}
+
+.cux-icon-request:before {
+    content: "\e973";
+}
+
+.cux-icon-person:before {
+    content: "\e900";
+}
+
+.cux-icon-group:before {
+    content: "\e901";
+}
+
+.cux-icon-dollar-sign:before {
+    content: "\e996";
+}
+
+.cux-icon-dollar-sign_filled:before {
+    content: "\e998";
+}
+
+.cux-icon-dollar-sign_hollow:before {
+    content: "\e997";
+}
+
+.cux-icon-contacts:before {
+    content: "\e902";
+}
+
+.cux-icon-globe:before {
+    content: "\e903";
+}
+
+.cux-icon-IV:before {
+    content: "\e986";
+}
+
+.cux-icon-kidneys:before {
+    content: "\e982";
+}
+
+.cux-icon-splitter_horizontal:before {
+    content: "\e98a";
+}
+
+.cux-icon-splitter_vertical:before {
+    content: "\e983";
+}
+
+.cux-icon-tablet:before {
+    content: "\e995";
+}
+
+.cux-icon-virtual_care:before {
+    content: "\e988";
+}
+
+.cux-icon-laptop:before {
+    content: "\e990";
+}
+
+.cux-icon-prohibited_slash:before {
+    content: "\e92b";
+}
+
+.cux-icon-prohibited_x:before {
+    content: "\e92c";
+}
+
+.cux-icon-radio-button_filled:before {
+    content: "\e98e";
+}
+
+.cux-icon-radio-button_empty:before {
+    content: "\e98f";
+}
+
+.cux-icon-identification_card:before {
+    content: "\e984";
+}
+
+.cux-icon-revenue_cycle:before {
+    content: "\e987";
+}
+
+.cux-icon-home:before {
+    content: "\e904";
+}
+
+.cux-icon-dashboard:before {
+    content: "\e905";
+}
+
+.cux-icon-save:before {
+    content: "\e906";
+}
+
+.cux-icon-print:before {
+    content: "\e907";
+}
+
+.cux-icon-folder_closed:before {
+    content: "\e908";
+}
+
+.cux-icon-open:before {
+    content: "\e909";
+}
+
+.cux-icon-settings:before {
+    content: "\e90a";
+}
+
+.cux-icon-filter:before {
+    content: "\e90b";
+}
+
+.cux-icon-edit:before {
+    content: "\e90c";
+}
+
+.cux-icon-calendar:before {
+    content: "\e90d";
+}
+
+.cux-icon-delete:before {
+    content: "\e90e";
+}
+
+.cux-icon-trash_full:before {
+    content: "\e90f";
+}
+
+.cux-icon-share:before {
+    content: "\e910";
+}
+
+.cux-icon-lock:before {
+    content: "\e911";
+}
+
+.cux-icon-lock_unlock:before {
+    content: "\e912";
+}
+
+.cux-icon-key:before {
+    content: "\e913";
+}
+
+.cux-icon-mail:before {
+    content: "\e914";
+}
+
+.cux-icon-reply:before {
+    content: "\e915";
+}
+
+.cux-icon-reply_all:before {
+    content: "\e916";
+}
+
+.cux-icon-forward2:before {
+    content: "\e917";
+}
+
+.cux-icon-direct-mail:before {
+    content: "\e918";
+}
+
+.cux-icon-chat:before {
+    content: "\e919";
+}
+
+.cux-icon-notes:before {
+    content: "\e91a";
+}
+
+.cux-icon-attachment:before {
+    content: "\e91b";
+}
+
+.cux-icon-pin:before {
+    content: "\e91c";
+}
+
+.cux-icon-location:before {
+    content: "\e91d";
+}
+
+.cux-icon-link:before {
+    content: "\e91e";
+}
+
+.cux-icon-link_broken:before {
+    content: "\e91f";
+}
+
+.cux-icon-bookmark:before {
+    content: "\e920";
+}
+
+.cux-icon-bookmark_filled:before {
+    content: "\e99c";
+}
+
+.cux-icon-flag:before {
+    content: "\e921";
+}
+
+.cux-icon-award:before {
+    content: "\e922";
+}
+
+.cux-icon-rating_empty:before {
+    content: "\e923";
+}
+
+.cux-icon-rating_fill:before {
+    content: "\e924";
+}
+
+.cux-icon-favorite_empty:before {
+    content: "\e925";
+}
+
+.cux-icon-favorite_filled:before {
+    content: "\e926";
+}
+
+.cux-icon-information:before {
+    content: "\e927";
+}
+
+.cux-icon-help:before {
+    content: "\e928";
+}
+
+.cux-icon-warning:before {
+    content: "\e92a";
+}
+
+.cux-icon-prohibited:before {
+    content: "\e92c";
+}
+
+.cux-icon-prohibited2:before {
+    content: "\e92d";
+}
+
+.cux-icon-checkmark_action:before {
+    content: "\e92e";
+}
+
+.cux-icon-checkmark:before {
+    content: "\e92f";
+}
+
+.cux-icon-asterisk:before {
+    content: "\e930";
+}
+
+.cux-icon-clock:before {
+    content: "\e931";
+}
+
+.cux-icon-stopwatch:before {
+    content: "\e932";
+}
+
+.cux-icon-refresh:before {
+    content: "\e933";
+}
+
+.cux-icon-history:before {
+    content: "\e934";
+}
+
+.cux-icon-undo:before {
+    content: "\e935";
+}
+
+.cux-icon-redo:before {
+    content: "\e936";
+}
+
+.cux-icon-arrow_down:before {
+    content: "\e937";
+}
+
+.cux-icon-arrow_left:before {
+    content: "\e938";
+}
+
+.cux-icon-arrow_right:before {
+    content: "\e939";
+}
+
+.cux-icon-arrow_up:before {
+    content: "\e93a";
+}
+
+.cux-icon-arrow_wtail_bold_down:before {
+    content: "\e99e";
+}
+
+.cux-icon-arrow_wtail_bold_left:before {
+    content: "\e99f";
+}
+
+.cux-icon-arrow_wtail_bold_right:before {
+    content: "\e9a0";
+}
+
+.cux-icon-arrow_wtail_bold_up:before {
+    content: "\e99d";
+}
+
+.cux-icon-arrow_wtail_down:before {
+    content: "\e9e9";
+}
+
+.cux-icon-arrow_wtail_left:before {
+    content: "\e9ea";
+}
+
+.cux-icon-arrow_wtail_right:before {
+    content: "\e9eb";
+}
+
+.cux-icon-arrow_wtail_up:before {
+    content: "\e9e8";
+}
+
+.cux-icon-sort:before {
+    content: "\e93b";
+}
+
+.cux-icon-rewind:before {
+    content: "\e940";
+}
+
+.cux-icon-forward:before {
+    content: "\e941";
+}
+
+.cux-icon-chevron_left:before {
+    content: "\e942";
+}
+
+.cux-icon-chevron_right:before {
+    content: "\e943";
+}
+
+.cux-icon-move:before {
+    content: "\e944";
+}
+
+.cux-icon-chart_column:before {
+    content: "\e945";
+}
+
+.cux-icon-chart_column_100:before {
+    content: "\e946";
+}
+
+.cux-icon-chart_column_stacked:before {
+    content: "\e947";
+}
+
+.cux-icon-chart_line:before {
+    content: "\e948";
+}
+
+.cux-icon-chart_line_isolated:before {
+    content: "\e949";
+}
+
+.cux-icon-chart_pie:before {
+    content: "\e94a";
+}
+
+.cux-icon-chart_row:before {
+    content: "\e94b";
+}
+
+.cux-icon-chart_row_stacked:before {
+    content: "\e94c";
+}
+
+.cux-icon-chart_row_stacked_100:before {
+    content: "\e94d";
+}
+
+.cux-icon-document:before {
+    content: "\e94e";
+}
+
+.cux-icon-copy:before {
+    content: "\e94f";
+}
+
+.cux-icon-copy_cant:before {
+    content: "\e950";
+}
+
+.cux-icon-copy_warning:before {
+    content: "\e951";
+}
+
+.cux-icon-document_download:before {
+    content: "\e952";
+}
+
+.cux-icon-document_forward:before {
+    content: "\e953";
+}
+
+.cux-icon-upload:before {
+    content: "\e954";
+}
+
+.cux-icon-download:before {
+    content: "\e955";
+}
+
+.cux-icon-document_search:before {
+    content: "\e956";
+}
+
+.cux-icon-export:before {
+    content: "\e957";
+}
+
+.cux-icon-import:before {
+    content: "\e958";
+}
+
+.cux-icon-ellipsis:before {
+    content: "\e959";
+}
+
+.cux-icon-book1:before {
+    content: "\e92b";
+}
+
+.cux-icon-list_1:before {
+    content: "\e95b";
+}
+
+.cux-icon-menu:before {
+    content: "\e95c";
+}
+
+.cux-icon-phone:before {
+    content: "\e95d";
+}
+
+.cux-icon-cloud:before {
+    content: "\e95e";
+}
+
+.cux-icon-wifi:before {
+    content: "\e95f";
+}
+
+.cux-icon-video:before {
+    content: "\e960";
+}
+
+.cux-icon-brightness:before {
+    content: "\e961";
+}
+
+.cux-icon-power:before {
+    content: "\e962";
+}
+
+.cux-icon-screen_full:before {
+    content: "\e963";
+}
+
+.cux-icon-screen_minimize:before {
+    content: "\e964";
+}
+
+.cux-icon-expand:before {
+    content: "\e965";
+}
+
+.cux-icon-reduce:before {
+    content: "\e966";
+}
+
+.cux-icon-new-window:before {
+    content: "\e967";
+}
+
+.cux-icon-remove:before {
+    content: "\e968";
+}
+
+.cux-icon-close:before {
+    content: "\e969";
+}
+
+.cux-icon-add2:before {
+    content: "\e96a";
+}
+
+.cux-icon-subtract:before {
+    content: "\e96b";
+}
+
+.cux-icon-view:before {
+    content: "\e96c";
+}
+
+.cux-icon-view_no:before {
+    content: "\e96d";
+}
+
+.cux-icon-search:before {
+    content: "\e96e";
+}
+
+.cux-icon-zoom_in:before {
+    content: "\e96f";
+}
+
+.cux-icon-zoom_out:before {
+    content: "\e970";
+}
+
+.cux-icon-ambulance:before {
+    content: "\e971";
+}
+
+.cux-icon-medication:before {
+    content: "\e972";
+}
+
+.cux-icon-clinicaloverview:before {
+    content: "\e985";
+}
+
+.cux-icon-encounters:before {
+    content: "\e973";
+}
+
+.cux-icon-accessible:before {
+    content: "\e974";
+}
+
+.cux-icon-tooth:before {
+    content: "\e975";
+}
+
+.cux-icon-allergy1:before {
+    content: "\e976";
+}
+
+.cux-icon-pharmacy:before {
+    content: "\e977";
+}
+
+.cux-icon-xray:before {
+    content: "\e978";
+}
+
+.cux-icon-immunization:before {
+    content: "\e979";
+}
+
+.cux-icon-lab_results:before {
+    content: "\e97a";
+}
+
+.cux-icon-blood-pressure:before {
+    content: "\e97b";
+}
+
+.cux-icon-vitals:before {
+    content: "\e97c";
+}
+
+.cux-icon-hazardous-materials:before {
+    content: "\e97d";
+}
+
+.cux-icon-new:before {
+    content: "\e97e";
+}
+
+.cux-icon-pdf:before {
+    content: "\e97f";
+}
+
+.cux-icon-xls:before {
+    content: "\e980";
+}
+
+.cux-icon-global-medical:before {
+    content: "\e981";
+}
+
+.cux-icon-response_4:before {
+    content: "\e95a";
+}
+
+.cux-icon-response_3:before {
+    content: "\e982";
+}
+
+.cux-icon-response_2:before {
+    content: "\e983";
+}
+
+.cux-icon-response_1:before {
+    content: "\e984";
+}
+
+.cux-icon-phone_ring:before {
+    content: "\e987";
+}
+
+.cux-icon-phone_out:before {
+    content: "\e988";
+}
+
+.cux-icon-phone_in:before {
+    content: "\e989";
+}
+
+.cux-icon-pending:before {
+    content: "\e98b";
+}
+
+.cux-icon-annotation:before {
+    content: "\e98d";
+}
+
+.cux-icon-bell:before {
+    content: "\e98e";
+}
+
+.cux-icon-checkbox_complete:before {
+    content: "\e98f";
+}
+
+.cux-icon-checkbox_empty:before {
+    content: "\e98d";
+}
+
+.cux-icon-checkbox_filled:before {
+    content: "\e98b";
+}
+
+.cux-icon-checkbox_hollow:before {
+    content: "\e989";
+}
+
+.cux-icon-charge:before {
+    content: "\e992";
+}
+
+.cux-icon-target:before {
+    content: "\e993";
+}
+
+.cux-icon-newwindow:before {
+    content: "\e995";
+}
+
+.cux-icon-book2:before {
+    content: "\e986";
+}
+
+.cux-icon-report:before {
+    content: "\e98a";
+}
+
+.cux-icon-complete:before {
+    content: "\e991";
+}
+
+.cux-icon-exclamationbox:before {
+    content: "\e997";
+}

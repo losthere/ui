@@ -1,0 +1,34 @@
+<div style="background-color: white;">
+	<div class="modal-header">
+		<h3>Confirmation</h3>
+		<table class="table table-hover data-table">
+			<tr>
+				<td colspan="1"><b>COLUMN</b></td>
+				<td colspan="1"><b>OLD</b></td>
+				<td colspan="1"><b>NEW</b></td>
+			</tr>
+			<tr>
+				<td>{{ columnName[0] }}</td>
+				<td>{{ selectedRow[1] }}</td>
+				<td>{{ measureRowToEdit.id.measurementYr }}</td>
+			</tr>
+			<tr>
+				<td>{{ columnName[1] }}</td>
+				<td>{{ selectedRow[2] }}</td>
+				<td>{{ measureRowToEdit.measureName }}</td>
+			</tr>
+			<tr>
+				<td>{{ columnName[2] }}</td>
+				<td>{{ selectedRow[3] }}</td>
+				<td>{{ measureRowToEdit.id.stratificationId }}</td>
+			</tr>
+			<tr ng-repeat="column in columnPojo">
+				<td>{{ columnName[$index + 3] }}</td>
+				<td>{{ selectedRow[$index + 4] }}</td>
+				<td>{{ measureRowToEdit[column] }}</td>
+			</tr>
+		</table>
+		<button ng-click="closeDialog()" class="btn">Cancel</button>
+		<button ng-click="saveOnEditMeasure()" class="btn btn-primary">Confirm</button>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+<div style="background-color: white;">
+	<div class="modal-header">
+		<h3>Confirmation</h3>
+		<table class="table table-hover data-table">
+			<tr>
+				<td colspan="1"><b>COLUMN</b></td>
+				<td colspan="1"><b>OLD</b></td>
+				<td colspan="1"><b>NEW</b></td>
+			</tr>
+			<tr ng-repeat="column in columnPojo">
+				<td>{{ columnName[$index] }}</td>
+				<td>{{ selectedRow[$index + 1] }}</td>
+				<td>{{ measureRowToEdit[column] }}</td>
+			</tr>
+		</table>
+		<button ng-click="closeDialog()" class="btn">Cancel</button>
+		<button ng-click="saveOnEditMeasure()" class="btn btn-primary">Confirm</button>
+	</div>
+</div>

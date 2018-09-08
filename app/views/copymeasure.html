@@ -1,0 +1,19 @@
+<div style="background-color: white;">
+	<div class="modal-header">
+		<h3>Copy Data</h3><br>
+		<select style="cursor:pointer;" ng-model="fromYear" ng-change="changeMeasureCodeList(fromYear)" >
+			<option value="">From Year</option>
+			<option ng-repeat="year in yearList">{{ year }}</option>
+		</select>&emsp;&emsp;
+		<select style="cursor:pointer;" ng-model="toYear">
+			<option value=""><b>To Year</b></option>
+			<option ng-repeat="year in yearList">{{ year }}</option>
+		</select>&emsp;&emsp;
+		<select style="cursor:pointer;" ng-model="mcode">
+			<option value="">Measure Name</option>
+			<option ng-repeat="measureCode in allMeasureCode">{{ measureCode }}</option>
+		</select><br><br>
+		<button ng-click="closeDialog()" class="btn">Close</button>
+		<button ng-click="confirmOnCopyMeasure(fromYear, toYear , mcode)" class="btn btn-primary">Copy</button>
+	</div>
+</div>

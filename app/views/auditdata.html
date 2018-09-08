@@ -1,0 +1,21 @@
+<div style="background-color: white;">
+	<div class="modal-header">
+		<h3>Audit History</h3>
+		<table class="table table-hover data-table">
+			<input ng-model="auditFilter" placeholder="Search" style="width:215px">&emsp;&emsp;
+			PAGE LENGTH 
+			<select ng-change="changeItemPerPageForAuditList(itemsPerPageForAuditList)" ng-model="itemsPerPageForAuditList">
+				<option ng-repeat="itemsPerPage in pageValues">{{ itemsPerPage }}</option>
+			</select><br><br>
+			<tr>
+				<td ng-repeat="column in columnNameForAudit"><b>{{ column }}</b></td>
+			</tr>
+			<tr dir-paginate="value in auditData | filter: auditFilter | itemsPerPage: itemsPerPageForAuditList" pagination-id="auditPagination">  
+ 				<td  style="width: max-content;" ng-repeat="count in columnCountOfAudit">{{ value[count] }}</td> 
+			</tr> 
+		</table>
+		<dir-pagination-controls pagination-id="auditPagination" class="pull-right"></dir-pagination-controls>
+		<button ng-click="closeDialog()" class="btn">Close</button>
+	</div>
+</div>
+

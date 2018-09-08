@@ -1,0 +1,30 @@
+<div style="background-color: white;">
+	<div class="modal-header">
+		<h3>Users</h3>
+		<table class="table table-hover data-table">
+		<input ng-model="userFilter" placeholder="Search" style="width:215px">&emsp;&emsp;
+			PAGE LENGTH 
+			 <select ng-change="changeItemPerPageForUsersList(itemsPerPageForUsersList)" ng-model="itemsPerPageForUsersList">
+				<option ng-repeat="itemsPerPage in pageValues">{{ itemsPerPage }}</option>
+			</select>&emsp; 
+			<tr>
+				<td>UserName</td>
+				<td>EmailId</td>
+				<td>Authenticate</td>
+				<td>Delete</td>
+			</tr>
+			
+ 			<tr dir-paginate="user in allUsers  | filter: userFilter | itemsPerPage: itemsPerPageForUsersList" pagination-id="userPagination"> 
+ 				<td>{{ user[1] }}</td>
+ 				<td>{{ user[0] }}</td> 
+ 				<td><button class = "btn btn-primary" ng-click="UserAuthorisation(user[0])" ng-disabled = "user[4]==1">Authorise</button></td> 
+				<td><button class = "btn btn-primary" ng-click="UserDeletion(user[0])" ng-disabled = "user[3]=='Optum Admin'">Delete User</button></td> 
+			
+			</tr> 
+			
+		</table>
+		<dir-pagination-controls pagination-id="userPagination" class="pull-right"></dir-pagination-controls>
+		<button ng-click="closeDialog()" class="btn">Close</button>
+	</div>
+</div>
+

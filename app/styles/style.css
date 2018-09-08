@@ -1,0 +1,130 @@
+/* Styles go here */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+
+.body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+.div {
+    border: 1px solid black;
+    padding: 200px 30px 50px 80px;
+} 
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .credit {
+  margin: 20px 0;
+}
+/*------------------------------------------------------*/
+
+
+.xwalk {
+	margin-left:190px;
+}
+
+#yearDropDown {
+ width:160px;   
+}
+
+#yearDropDown option {
+ width:140px;   
+}
+
+.custom {
+    width: 78px !important;
+}
+.custom1 {
+    width: 115px !important;
+}
+
+.table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #DDD;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table td {
+	max-width: fit-content;
+}
+
+.table th {
+	white-space: nowrap;
+}
+
+.tableMargin {
+	margin-left:50px;
+} 
+
+.dropbtn {
+    color: white;
+    padding: 0px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor:pointer;
+}
+
+.dropdown-content a:hover { background-color: #ffffff }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ffffff;
+}
+
+.multiselect-container>li>a>label {
+  padding: 4px 20px 3px 20px;
+}

@@ -1,0 +1,52 @@
+<form>
+<div class="control-group" style="background-color: white;height:400px;width:auto; overflow:auto">
+	<div class="modal-header">
+		<h3>Add Measure</h3>
+		measure year&emsp;&emsp;
+		<select class="form-control" style="cursor:pointer;width:200px;" ng-change="changeMeasureCodeList(measureYearForMeasureCode)" ng-model="measureYearForMeasureCode">
+			<option style="cursor:pointer;width:200px;" ng-repeat="measureYearForMeasureCode in yearList">{{ measureYearForMeasureCode }}</option>
+		</select>
+		<table class="table table-hover data-table">
+			<tr ng-repeat="column in columnPojo" ng-if="tableType == 'HDE XWALK TABLES'">
+				<td >{{ columnName[$index] }}</td>
+				<td><input ng-model="measureRowToAdd[column]" style="height: 30px; width: 200px;"/></td>
+			</tr>
+		</table>
+		<table class="table table-hover data-table">
+			<tr ng-repeat="column in columnPojo" ng-if="tableType == 'OHR DEFINATION FILES'">
+				<td ng-if="(column != 'measureId' && tableName =='MEASURE')|| (column != 'dashMeasureSummaryDefId' && tableName =='DASH MEASURE SUMMARY DEF')|| (column != 'denominatorEadMetricDefId' && tableName =='DENOMINATOR EAD METRIC DEF') || (column != 'measureDetailDefId' && tableName =='MEASURE DETAIL DEF ACC') || (column != 'measureSummaryDefId' && tableName =='MEASURE SUMMARY DEF') ||  (column != 'numeratorId' && tableName =='NUMERATOR')" ng-hide="column=='createUser' || column=='creatTmstmp' || column=='updtUser'  || column=='updtTmstmp' || column=='measureYear'">
+					{{ columnName[$index] }}
+				</td>
+				<td ng-if="column == 'measureId'  && tableName !='MEASURE'">
+					<select class="form-control" style="cursor:pointer;width:200px;"  ng-model="measureRowToAdd[column]">
+							<option style="cursor:pointer;width:200px;" ng-repeat="mId in allMeasureId track by $index" value={{mId}}>{{ allMeasureCode[$index] }}</option>
+					</select>
+				</td>
+				<td ng-if="column == 'productLine'">
+					<select class="form-control" style="cursor:pointer;width:200px;"  ng-model="measureRowToAdd[column]" >
+							<option style="cursor:pointer;width:200px;" ng-repeat="pLine in productLine" >{{ pLine }}</option>
+					</select>
+				</td>
+				<td ng-if="column == 'hasHybrid'|| column == 'isPld' || column == 'isActive' || column == 'isCommercial' || column == 'isActive' || column == 'isMedicaid' || column == 'isMedicare' || column == 'isMarketPlace' || column == 'isSnp' || column == 'isStars' || column == 'isNonHedis'" >
+				      <input  type= "radio" value="1" ng-model="measureRowToAdd[column]">Y&emsp;
+				      <input  type= "radio"  value="0" ng-model="measureRowToAdd[column]">N
+				</td>
+				<td ng-if="column == 'createUser'" ng-hide=true>
+					<input class="form-control" style="height: 30px; width: 200px;" ng-model="measureRowToAdd[column]"/></td>
+				</td>
+				<td ng-if="column == 'numeratorId' && tableName =='DASH MEASURE SUMMARY DEF'">
+					<input class="form-control" style="height: 30px; width: 200px;" ng-model="measureRowToAdd[column]"/></td>
+				</td>
+				<td ng-if="column=='metricCode'|| column=='metricName' || (column=='numeratorCode' && tableName == 'NUMERATOR')">
+				<input class="form-control" ng-model="measureRowToAdd[column]" style="height: 30px; width: 200px;" required/>
+				</td>
+				<td ng-hide="column=='metricCode'|| column=='metricName' || (column=='numeratorCode' && tableName == 'NUMERATOR') || column=='measureYear' || column=='creatTmstmp' || column=='updtUser'  || column=='updtTmstmp' " ng-if="column != 'productLine' && column != 'measureId' && column != 'hasHybrid' && column != 'isActive' && column != 'isCommercial' && column != 'isActive' && column != 'isMedicaid' && column != 'isMedicare' &&  column != 'isMarketPlace' && column != 'isSnp' && column != 'isStars' && column != 'isNonHedis'&& column != 'isPld' && column != 'createUser' && column != 'dashMeasureSummaryDefId' && column != 'denominatorEadMetricDefId' && column != 'measureDetailDefId' && column != 'measureSummaryDefId' && column != 'numeratorId'">
+					<input class="form-control" ng-model="measureRowToAdd[column]" style="height: 30px; width: 200px;"/>
+				</td>
+			</tr>
+		</table>
+		<button ng-click="closeDialog()" class="btn">Close</button>
+		<button ng-click="saveOnAddMeasure()" class="btn btn-primary">Save</button>
+	</div>
+</div>
+</form>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>X-Walk Application</title>
+		
+		<script src="bower_components/angular-jquery/jquery.min.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="bower_components/uitk/lib/angular-translate/angular-translate.js"></script>
+<!-- 		<script src="bower_components/lodash/lk/angular-translate.js"></script>
+ -->		<script src="bower_components/angular-bootstrap/bootstrap.js"></script>
+		<script src="bower_components/ngDialog/js/ngDialog.js"></script>
+		<script src="bower_components/angular-notify/dist/angular-notify.js"></script>
+		<script src="bower_components/dirPagination.js"></script>
+		<script src="bower_components/SweetAlert/sweet-alert.js"></script>
+		<script src="bower_components/SweetAlert/SweetAlert.min.js"></script> 
+		<script src="bower_components/FileSaver.js"></script>
+		<script src="bower_components/uitk/js/uitk.min.js"></script>
+		<script src="bower_components/uitk/lib/ng-csv/ng-csv.js"></script>
+		
+		
+		<link rel="stylesheet" href="styles/style.css"/>
+		<link rel="stylesheet" href="bower_components/angular-bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog.css"/>
+		<link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-plain.css"/>
+		<link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-default.css"/>
+		<link rel="stylesheet" href="bower_components/angular-notify/dist/angular-notify.css"/>
+		<link rel="stylesheet" href="bower_components/SweetAlert/sweet-alert.css"/>
+		<link rel="stylesheet" href="bower_components/uitk/css/uitk.min.css"/>
+		
+		<script src="scripts/app.js"></script>
+		<script src="scripts/DashBoardCtrl.js"></script>
+		<script src="scripts/LoginCtrl.js"></script>
+		<script src="scripts/DummyCtrl.js"></script>
+		
+<!-- 		 <nav class="navbar navbar-default" style="background-color: #fdfefe;">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<img class="ux-hdr-logo" src="images/optumLogo.gif"/>&emsp;
+					<img class="ux-hdr-logo" src="images/xwalkLogo.png"/>
+				</div>
+				<div style="padding-left: 1%; display: table-cell; width: 95%;">
+				</div>
+			</div>
+			</nav>  -->
+			
+			
+	<uitk:header logo="images/xwalkLogo.png" alt-text="X-Walk Application"
+		url="#/dashboard" style="background-color: #fdfefe;">
+		<div class="navbar-header"></div>
+		<uitk:primary-navigation model="primaryNavModel"></uitk:primary-navigation>
+	</uitk:header>
+</head> 
+	
+	<body ng-app="X-WalkApp" style="background-color: #eaeded">
+		<div ng-view></div>
+		<div ng-cloak id="pagewrap" class="container"></div>
+	</body>
+	
+	<footer>
+		<div class="footer navbar-fixed-bottom" style="background-color: #fdfefe;">
+			<div style="padding-left: 1%; display: table-cell; width: 95%;">&copy; 2017, Optum Inc. All rights reserved. &nbsp; 
+				<a style="cursor: pointer;" title="Privacy Policy" ng-click="privacyPolicyPopup('Privacy Policy');">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a style="cursor: pointer;" title="Terms of Use" ng-click="privacyPolicyPopup('Terms of Use');">Terms of Use</a>
+			</div>
+			<div style="text-align: right; display: table-cell;">
+				<a style="text-align: right;"><img  style="height: 30px;" class="ux-hdr-logo" src="images/optumLogo.gif"/></a>
+			</div>
+		</div>
+	</footer>
+</html>

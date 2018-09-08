@@ -1,0 +1,25 @@
+<div style="background-color: white;">
+	<div class="modal-header">
+		<h3>Edit Measure</h3>
+		<table class="table table-hover data-table">
+			<tr>
+				<td>MEASUREMENT YEAR</td>
+				<td><input ng-model="measureRowToEdit.id.measurementYr" style="height: 30px; width: 200px;"/></td>
+			</tr>
+			<tr>
+				<td>MEASURE NAME</td>
+				<td><input ng-model="measureRowToEdit.measureName" style="height: 30px; width: 200px;"/></td>
+			</tr>
+			<tr>
+				<td>STRATIFICATION ID</td>
+				<td><input ng-model="measureRowToEdit.id.type" style="height: 30px; width: 200px;"/></td>
+			</tr>
+			<tr ng-repeat="column in columnPojo">
+				<td>{{ columnName[$index + 3] }}</td>
+				<td><input ng-model="measureRowToEdit[column]" style="height: 30px; width: 200px;"/></td>
+			</tr>
+		</table>
+		<button ng-click="closeDialog()" class="btn">Close</button>
+		<button ng-click="confirmOnEditMeasure()" class="btn btn-primary">Save</button>
+	</div>
+</div>

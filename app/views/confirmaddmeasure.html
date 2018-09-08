@@ -1,0 +1,13 @@
+<div style="background-color: white;">
+	<div class="modal-header">
+		<h3>Confirmation</h3>
+		<table class="table table-hover data-table">
+			<tr ng-repeat="column in columnPojo">
+				<td>{{ columnName[$index] }}</td>
+				<td>{{ measureRowToAdd[column] }}</td>
+			</tr>
+		</table>
+		<button ng-click="closeDialog()" class="btn">Close</button>
+		<button ng-click="saveOnAddMeasure()" class="btn btn-primary">Confirm</button>
+	</div>
+</div>
